@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
   font-family: "Poppins", sans-serif;
   max-width: 100vw;
   margin: 0 10rem;
+  overflow-x: hidden;
 }
 
 header {
@@ -28,6 +30,15 @@ header ul {
   gap: 2rem;
   list-style: none;
   margin-right: 32rem;
+}
+
+header a {
+  all: unset;
+  cursor: pointer;
+}
+
+header a:hover {
+  color: #FB9333;
 }
 
 main {
@@ -76,9 +87,9 @@ input {
 button {
   background-color: #FB9333;
   color: #FFFFFF;
-  border-radius: 4rem;
-  border: 0;
+  border-radius: 40px;
   cursor: pointer;
+  border: 2px solid transparent;
 }
 
 footer {
@@ -175,6 +186,12 @@ footer {
   padding: 2.2rem 2.4rem;
   border-radius: 1.2rem;
   background-color: #FB9333;
+}
+
+.arrow-wrapper:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transform: scale(1.1);
 }
 
 .menu-section {
@@ -290,7 +307,7 @@ footer nav ul {
 .subtitle-card {
   color: #2B2B2B;
   font-weight: 600;
-  font-size: textLarge;
+  font-size: 2.4rem;
 }
 
 .subparagraph {
@@ -381,6 +398,18 @@ footer nav ul {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+.menu-title-subtitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media div a img:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=styles.css.map */
