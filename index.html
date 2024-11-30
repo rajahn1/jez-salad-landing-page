@@ -15,6 +15,7 @@
       href="svg/icons/favicon.png"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -135,7 +136,7 @@
           Langsung dari Kebun Sendiri yang tersebar di setiap provinsi yang
           memiliki cabang toko Jez Salad
         </p>
-        <div class="flex-center">
+        <div class="flex-center learn-more">
           <a class="subparagraph">Learn more</a>
           <svg
             width="16"
@@ -161,7 +162,7 @@
           The pioneer of healthy fruit salads that are delicious & suitable for
           all people with the best quality assurance.
         </p>
-        <div class="flex-center">
+        <div class="flex-center learn-more">
           <a class="subparagraph">Learn more</a>
           <svg
             width="16"
@@ -187,7 +188,7 @@
           We are one of the best brands in the Food and Beverage sector<br />
           in Indonesia.
         </p>
-        <div class="flex-center">
+        <div class="flex-center learn-more">
           <a class="subparagraph">Learn more</a>
           <svg
             width="16"
@@ -221,20 +222,21 @@
           customers who bought our products.
         </p>
         <div class="carrousel-index">
-          <span class="active">02</span>
-          <span class="inactive">/ 05</span>
+          <span id="actualPage" class="active"></span>
+          <span class="inactive"> / </span>
+          <span id="totalPages" class="inactive"></span>
         </div>
         <div style="display: flex; gap: 2rem">
-          <div class="arrow-wrapper">
+          <div id="previousPage" class="arrow-wrapper">
             <img src="svg/icons/left-arrow.svg" alt="" />
           </div>
-          <div class="arrow-wrapper">
+          <div id="nextPage" class="arrow-wrapper">
             <img src="svg/icons/right-arrow.svg" alt="" />
           </div>
         </div>
       </article>
       <article class="customer-wrapper">
-        <div class="customer-review">
+        <!-- <div class="customer-review">
           <img src="svg/avatar/selena.svg" alt="" />
           <h2>Selena Gomz</h2>
           <span class="age">27 years</span>
@@ -275,7 +277,7 @@
             because they really take<br />
             care of the quality.
           </p>
-        </div>
+        </div> -->
       </article>
     </section>
 
@@ -343,10 +345,10 @@
       <nav>
         <ul>
           <li><a class="text-orange poppins-semibold">Feature</a></li>
-          <li><a>Menu</a></li>
-          <li><a>Promo</a></li>
-          <li><a>Contact</a></li>
-          <li><a>About us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#home">Promo</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about-us">About us</a></li>
         </ul>
       </nav>
       <section class="footer-contact">
@@ -381,6 +383,8 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./js/animation.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/mock.js"></script>
   </body>
 </html>

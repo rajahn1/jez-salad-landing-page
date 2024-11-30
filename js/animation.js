@@ -22,6 +22,8 @@ const subtitleSection2 = document.querySelector(".subtitle-section-2");
 const aboutUsLeft = document.querySelector(".about-us-left");
 const aboutUsRight = document.querySelector(".customer-wrapper");
 
+const learnMoreComponents = document.querySelectorAll(".learn-more");
+
 gsap.fromTo(mainTitle, 1, {
   x: -100,
   opacity: 0,
@@ -42,11 +44,13 @@ opacity: 0
 
 gsap.fromTo(buttonSign, 1,
   {
+    display: "none",
     x: 300,
     opacity: 0,
   
   },
   { 
+    display: "block",
     x: 0,
     opacity: 1,
     delay: 1
@@ -149,7 +153,6 @@ const menuSection = document.querySelector(".menu-section");
 const foodsDescriptions = document.querySelectorAll(".food-container");
 const tlFoodDescriptions = gsap.timeline({
   scrollTrigger: {
-    markers: true,
     trigger: menuSection,
     start: 'top 90%',
     end: 'center 60%',
@@ -161,10 +164,25 @@ foodsDescriptions.forEach(element => {
   tlFoodDescriptions.from(element, {
     y: 500,
     opacity: 0
+  });
+
+  const hoverAnimation = gsap.to(element, {
+    paused: true,
+    opacity: 0.9,
+    scale: 1.05,
+    transform: "translate(0, -30px)",
+    cursor: "pointer",
+    duration: .2,
+  });
+
+  element.addEventListener("mouseenter", () => hoverAnimation.play());
+  element.addEventListener("mouseleave", () => hoverAnimation.reverse());
+  element.addEventListener("click", () => {
+    gsap.to(element, { scale: 1.2, duration: 0.1, ease: "power1.out", onComplete: () => {
+      gsap.to(element, { scale: 1.1, duration: 0.1, ease: "power1.in" });
+    }})
   })
 });
-
-
 
 allButtons.forEach((button) => {
   if (button.classList.contains("ignore")) return;
@@ -185,6 +203,53 @@ allButtons.forEach((button) => {
     }});
   });   
 });
+
+learnMoreComponents.forEach((item => {
+  const hoverAnimation = gsap.to(item, {
+    paused: true,
+    opacity: 0.8,
+    color: "#FB9333",
+    transform: "translate(15px)",
+    cursor: "pointer",
+    duration: .3
+  });
+
+  const linkAnimation = gsap.to(item.querySelector("a"), {
+    paused: true,
+    color: "#FB9333",
+    duration: 0.3,
+  });
+
+  const pathAnimation = gsap.to(item.querySelector("svg > path"), {
+    paused: true,
+    fill: "#FB9333",
+    duration: 0.3,
+  });
+  const svgAnimation = gsap.to(item.querySelector("svg"), {
+    paused: true,
+    duration: 0.3,
+    scale: 1.2
+  });
+
+  item.addEventListener("mouseenter", () => {
+    hoverAnimation.play();
+    linkAnimation.play();
+    svgAnimation.play();
+    pathAnimation.play();
+    
+  });
+
+  item.addEventListener("mouseleave", () => { 
+    hoverAnimation.reverse();
+    linkAnimation.reverse();
+    svgAnimation.reverse();
+    pathAnimation.reverse();
+  });
+}))
+
+
+
+
 
 
 
