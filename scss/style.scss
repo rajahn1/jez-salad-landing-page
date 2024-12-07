@@ -36,6 +36,10 @@ body {
     max-width: 100vw;
     margin: 0 10rem;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -78,8 +82,9 @@ form {
     justify-content: center;
     background-color: #FFF1DE;
     align-items: center;
-    margin: 4rem -10rem;
-    padding: 6rem;
+    margin: 6rem -10rem;
+    padding: 12rem 4rem;
+    width: 100vw;
 }
 
 form h2 {
@@ -553,7 +558,7 @@ footer nav ul li a:hover {
         width: 100%;
         gap: 4rem;
         align-items: center;
-    
+        justify-content: center;
     }
 
     main article{
@@ -566,6 +571,8 @@ footer nav ul li a:hover {
 
     .section-cards{
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
     }
 
@@ -575,14 +582,19 @@ footer nav ul li a:hover {
 
     .food-wrapper{
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
     }
     .food-container{
         height: 56rem;
+        width: 100%;
     }
 
     .customer-wrapper{
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 6rem;
     }
 
@@ -593,6 +605,16 @@ footer nav ul li a:hover {
     form div input {
         font-size: 16px;
     }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2.4rem;
+    }
+
+    
    
 }
 
