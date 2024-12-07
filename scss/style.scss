@@ -69,6 +69,7 @@ main {
 main article {
     display: flex;
     flex-direction: column;
+    width: 50%;
     gap: 2rem;
 }
 
@@ -248,7 +249,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 36rem;
+    //width: 36rem;
     height: 56rem;    
     background-size: cover;
     background-repeat: no-repeat;
@@ -457,6 +458,7 @@ footer nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .social-media div a img:hover {
@@ -495,7 +497,7 @@ footer nav ul li a:hover {
         font-size: 36px;
     }
 
-    .main left p {
+    .main-left p {
         font-size: 1.4rem;
     }
 
@@ -542,6 +544,54 @@ footer nav ul li a:hover {
     }
 
     .footer-contact{
+    }
+}
+
+@media (max-width: 768px){
+    main{
+        flex-direction: column;
+        width: 100%;
+        gap: 4rem;
+        align-items: center;
+    
+    }
+
+    main article{
+        width: 100%;
+    }
+
+    .hero-woman{
+        max-width: 100%;
+    }
+
+    .section-cards{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .section-cards .card{
+        width: 100%;
+    }
+
+    .food-wrapper{
+        flex-direction: column;
+        width: 100%;
+    }
+    .food-container{
+        height: 56rem;
+    }
+
+    .customer-wrapper{
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    form div{
+        width: 100%;
+    }
+
+    form div input {
+        font-size: 16px;
     }
 }
 
