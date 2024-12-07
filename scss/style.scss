@@ -76,9 +76,9 @@ form {
     display: flex;
     justify-content: center;
     background-color: #FFF1DE;
-    border-radius: 4rem;
     align-items: center;
-    padding: 4rem 0 8rem 0;
+    margin: 4rem -10rem;
+    padding: 6rem;
 }
 
 form h2 {
@@ -133,7 +133,7 @@ footer {
 /* Containers */
 
 .card {
-    width: 33%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -141,17 +141,26 @@ footer {
     border: 2px solid #FFF0DA;
     border-radius: 4rem;
     background-color: $white;
+    height: 52rem;
 }
 
 .card img {
     width: 10rem;
 }
 
+.card h3 {
+    height: 20%;
+}
+
+.card p {
+    height: 50%;
+}
+
 .about-us {
     display: flex;
-    justify-content: space-between;
     margin: 4rem -10rem;
-    padding: 10rem;
+    gap: 2rem;
+    padding: 6rem;
     background: rgb(255,246,234);
     background: linear-gradient(180deg, rgba(255,246,234,1) 0%, rgba(255,232,199,1) 100%);
 }
@@ -160,6 +169,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: 30%;
 }
 
 .carrousel-index {
@@ -182,7 +192,9 @@ footer {
     display: flex;
     position: relative;
     gap: 2rem;
-    width: 50%;
+    //height: 55rem;
+    height: fit-content;
+    width: 60%;
 }
 
 .customer-review {
@@ -193,7 +205,6 @@ footer {
     padding: 2.4rem;
     border-radius: 1rem;
     gap: 1.4rem;
-    height: fit-content;
 }
 
 .customer-review img {
@@ -230,18 +241,20 @@ footer {
     justify-content: center;
     gap: 4rem;
     margin: 8rem 0;
+    max-width: calc(100vw - 8rem);
 }
 
 .food-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 36.33rem;
-    height: 52rem;
-    
+    width: 36rem;
+    height: 56rem;    
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 8rem;
+    
 }
 
 .completed-salad {
@@ -446,8 +459,90 @@ footer nav ul li a:hover {
     align-items: center;
 }
 
-
 .social-media div a img:hover {
     cursor: pointer;
     opacity: 0.8;
 }
+
+.skip-the-diet{
+    width: 100%;
+}
+
+@media (max-width: 1366px) {
+    .customer-wrapper{
+        //flex-direction: column;
+    }
+}
+.hero-woman{
+    max-width:50%;
+}
+
+
+@media (max-width: 980px){
+    header{
+        justify-content: space-around;
+    }
+
+    header ul{
+        margin-right: 2rem;
+    }
+
+    .hero-woman{
+        //width: 42rem;
+    }
+
+    .skip-the-diet{
+        font-size: 36px;
+    }
+
+    .main left p {
+        font-size: 1.4rem;
+    }
+
+    .title-section-2 h2 {
+        //font-size: 32px;
+    }
+
+    .food-container{
+        //width: 32rem;
+    }
+
+    .why-chose-us-wrapper{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-us{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-us-left{
+        width: 80%;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .pagination-wrapper{
+        display: none;
+    }
+    .customer-wrapper{
+        width: 100%;
+        margin-top: 8rem;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    footer nav ul{
+        flex-direction: row;
+    }
+
+    .footer-contact{
+    }
+}
+
+
