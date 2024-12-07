@@ -481,6 +481,9 @@ footer nav ul li a:hover {
     width: 100%;
 }
 
+form div button{
+    padding: 1.8rem 3.2rem;
+}
 @media (max-width: 1366px) {
     .customer-wrapper{
         //flex-direction: column;
@@ -563,6 +566,19 @@ footer nav ul li a:hover {
 }
 
 @media (max-width: 768px){
+    body{
+        margin: 0 4rem;
+    }
+    .about-us{
+        margin: 4rem -4rem;
+        padding: 1rem 2rem;
+    };
+
+    form{
+        margin: 4rem -4rem;
+        padding: 2rem 3rem;
+    }
+    
     main{
         flex-direction: column;
         width: 100%;
@@ -573,6 +589,8 @@ footer nav ul li a:hover {
 
     main article{
         width: 100%;
+        align-items: center;
+        text-align: center;
     }
 
     .hero-woman{
@@ -610,10 +628,11 @@ footer nav ul li a:hover {
 
     form div{
         width: 100%;
+        margin-top: 1rem;
     }
 
     form div input {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     header{
@@ -622,6 +641,24 @@ footer nav ul li a:hover {
         justify-content: center;
         gap: 2rem;
         margin-bottom: 2.4rem;
+    }
+
+    .card{
+        width: 100%;
+    }
+    .navbar ul{
+        font-size: 12px;
+    }
+
+    form div button {
+        padding: .4rem .6rem;
+        font-size: 12px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    .subtitle{
+        font-size: 40px;
     }
 }
 
